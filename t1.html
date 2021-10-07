@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Roboticized by Yash Sahu
+-->
+<html>
+	<head>
+		<title>Creating & Removing Directories in Linux</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/robot5.png">
+	</head>
+	<body class="is-preload">
+		
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Roboticized</strong> by Yash Sahu</a>
+									<ul class="icons">
+										<li><a href="https://github.com/YashKSahu" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://yashkumarsahu.netlify.app/" class="icon fa-user"><span class="label">Portfolio</span></a></li>
+										<li><a href="https://www.instagram.com/yash.k.sahu/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Creating and Removing Directories in Linux: Ubuntu/CentOS/OpenSUSE</h2>
+									</header>
+							
+									<hr />
+
+									<!-- Box -->
+									<h3>$ mkdir / $ rmdir</h3>
+									<div class="box">
+										<p>The <b>mkdir</b> command is used to make directories from the command line interface (CLI). The <b>rmdir</b> command is used to remove directories. </br>
+											By defualt these both commands create and remove empty directories but with the help of <b>command options</b> non-empty and nested directories can also be created and deleted respectively.</p>
+										<!-- Preformatted Code -->
+									<h4>Syntax</h4>
+									<pre><code>$ mkdir/rmdir [OPTIONS]... &ltDIRECTORY_NAME&gt...</code></pre>
+
+									<h4>mkdir examples</h4>
+										<ul>
+											<li>To make an empty directory.</li>
+												<pre><code>$ mkdir videos </code></pre>
+											<li>To make a parent directories, nested directories with -p, --parent option.</li>
+												<pre><code>$ mkdir -p music/hindi_songs </code></pre>
+												<pre><code>$ mkdir --parent music/hindi_songs </code></pre>
+										</ul>
+
+									<h4>rmdir examples</h4>
+										<ul>
+											<li>To remove an empty directory.</li>
+												<pre><code>$ rmdir videos </code></pre>
+											<li>To remove parent directories, nested directories with -p, --parent option.</li>
+												<pre><code>$ rmdir -p music/hindi_songs </code></pre>
+												<pre><code>$ rmdir --parent music/hindi_songs </code></pre>
+										</ul>
+
+									<h4>References</h4>
+										<ul>
+											<li>man pages.</li>
+										</ul>
+									
+									</div>
+								</section>
+								<hr />
+								<h4>End</h4>
+								<ul class="actions">
+									<li><a href="t1.html" class="button small">Go to Top</a></li>
+								</ul>
+
+						</div>
+					</div>
+					
+					
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="tutorials.html">Tutorials</a></li>
+										<!--
+										<li><a href="elements.html">Elements</a></li>
+										<li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										-->
+										<li><a href="https://yashkumarsahu.netlify.app/">About Me</a></li>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Learn / Reference</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="#" class="image"><img src="images/ros.png" alt="" /></a>
+										<p>ROS provides libraries and tools to help software developers create robot applications.</p>
+										<ul class="actions">
+											<li><a href="http://wiki.ros.org/" class="button">ROS Wiki</a></li>
+										</ul>
+									</article>
+									
+									<article>
+										<a href="#" class="image"><img src="images/jetson.png" alt="" /></a>
+										<p>JetsonHacks community contains a rich collection of articles on Jetson boards.</p>
+										<ul class="actions">
+											<li><a href="https://www.jetsonhacks.com/" class="button">JetsonHacks</a></li>
+										</ul>
+									</article>
+									<!--
+									<article>
+										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+									-->
+								</div>
+						
+							</section>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+						<!--		<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>	-->
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a>ysahu262@outlook.com</a></li>
+									<!--	<li class="icon solid fa-phone">(000) 000-0000</li>	-->
+									<!--	<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+									Nashville, TN 00000-0000</li>	-->
+									<li class="icon solid fa-home">Gwalior, Madhya Pradesh,<br />
+										INDIA</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Roboticized, 2021-22. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
