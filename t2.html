@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<!--
+	Roboticized by Yash Sahu
+-->
+<html>
+	<head>
+		<title>The man-pages in Linux</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/robot5.png">
+	</head>
+	<body class="is-preload">
+		
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Roboticized</strong> by Yash Sahu</a>
+									<ul class="icons">
+										<li><a href="https://github.com/YashKSahu" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://yashkumarsahu.netlify.app/" class="icon fa-user"><span class="label">Portfolio</span></a></li>
+										<li><a href="https://www.instagram.com/yash.k.sahu/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>The man-pages in Linux: Defacto Linux Documentation</h2>
+									</header>
+							
+									<hr />
+
+									<!-- Box -->
+									<h3>$ man </h3>
+									<div class="box">
+										<p>The <b>man pages</b> (short for manual pages) are the most often-used source of Linux documentation. </br>
+											They provide in-depth documentation about many programs and utilities, as well as other topics, including 
+											configuration files, and programming APIs for system calls, library routines, and the kernel. They are 
+											present on all Linux distributions and are always at your fingertips. </br>
+											
+										</br>
+											The man pages infrastructure was first introduced in the early <b>UNIX</b> versions, at the beginning of <b>1970s</b>. 
+											The name man is just an abbreviation for manual.
+										</br>
+										
+										</p>
+										<!-- Preformatted Code -->
+									<h4>Syntax</h4>
+									<pre><code>$ man [man options] [[section] page ...] ...</code></pre>
+
+									<p>The <b>man</b> program searches, formats, and displays the information contained in the man page system.</br>
+									</br><i>The below command line example explains with use of <b>sysctl</b> system program.</i></br>
+									</p>
+
+									<h4>Display the manual pages</h4>
+										<ul>
+											<li>To display the manual pages for the program <b>sysctl</b>.</li>
+												<pre><code>$ man sysctl 
+Output:
+SYSCTL(8)                              System Administration                             SYSCTL(8)
+
+NAME
+       sysctl - configure kernel parameters at runtime
+
+SYNOPSIS
+       sysctl [options] [variable[=value]] [...]
+       sysctl -p [file or regexp] [...]
+
+DESCRIPTION
+       sysctl  is used to modify kernel parameters at runtime.  The parameters available are those
+       listed under /proc/sys/.  Procfs is required for sysctl support  in  Linux.   You  can  use
+       sysctl to both read and write sysctl data.
+
+PARAMETERS
+       variable
+              The  name of a key to read from.  An example is kernel.ostype.  The '/' separator is
+              also accepted in place of a '.'.
+
+       variable=value
+              To set a key, use the form variable=value where variable is the key and value is the
+              value  to set it to.  If the value contains quotes or characters which are parsed by
+              the shell, you may need to enclose the value in double quotes.
+</code></pre>
+
+									<p>A manual page consists of several sections.</br>
+										Conventional  section  names  include <i> NAME, SYNOPSIS, CONFIGURATION, DESCRIPTION, 
+										OPTIONS, PARAMETERS, EXIT STATUS, RETURN VALUE, ERRORS,  ENVIRONMENT,  FILES,  
+										VERSIONS,  CONFORMING TO,  NOTES, BUGS, EXAMPLE, AUTHORS, and SEE ALSO. </i>
+
+									</p>
+
+									<h4>Manual Chapters</h4>
+
+									<p>The <b>man pages</b> are divided into chapters numbered <b>1 through 9</b>.</br>
+										The <b>Linux man-pages</b> project documents the Linux kernel and <b>C library</b> interfaces that 
+										are employed by user-space programs. With respect to the C library, the primary focus 
+										is the <b>GNU C library (glibc)</b>, although, where known, documentation of variations in other 
+										C libraries available for Linux is also included.
+									</br></br>
+										The project provides manual pages in the following chapters: </br>
+										<i>A chapter, if provided, will direct man to look only in that 
+										section of the manual.</i>
+									</p>
+									
+									<ol>
+										<li> Executable programs or shell commands</li>
+										<li>System calls (functions provided by the kernel)</li>
+										<li>Library calls (functions within program libraries)</li>
+										<li>Special files (usually found in /dev)</li>
+										<li>File formats and conventions, e.g. /etc/passwd</li>
+										<li>Games</li>
+										<li>Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)</li>
+										<li>System administration commands (usually only for root)</li>							</li>
+										<li>Kernel routines [Non standard]</li>
+									</ol>
+
+									<p>
+										To see a specific chapter of the manual append the chapter number in the command as in:
+									</p>
+
+										<ul>
+											<li>To see a specific chapter of the manual append the chapter number in the command as in:</li>
+												<pre><code>$ man 8 sysctl 
+Output:
+SYSCTL(8)                              System Administration                             SYSCTL(8)
+
+NAME
+       sysctl - configure kernel parameters at runtime
+
+SYNOPSIS
+       sysctl [options] [variable[=value]] [...]
+       sysctl -p [file or regexp] [...]
+												</code></pre>
+										</ul>
+
+									<h4>Options</h4>
+									<ul>
+										<h4>man -f</h4>
+											<li>To Lookup all the manual pages referenced by sysctll and print out the short descriptions of any 
+												found.  Equivalent to <b>$ whatis sysctl</b>.</li>
+												<pre><code>$ man -f sysctl 
+Output:
+sysctl (8)		- configure kernel parameters at runtime
+sysctl (2)		- read/write system parameters
+												</code></pre>
+
+												<pre><code>$ whatis sysctl
+Output:
+sysctl (8)		- configure kernel parameters at runtime
+sysctl (2)		- read/write system parameters
+												</code></pre>
+
+										<h4>man -k</h4>
+											<li>Search the short descriptions and manual page names for the keyword sysctl as  regular
+												expression.  Print out any matches.  Equivalent to <b>$ apropos sysctl</b>.</li>
+												<pre><code>$ man -k sysctl 
+Output:
+_sysctl (2)          - read/write system parameters
+sysctl (2)           - read/write system parameters
+sysctl (8)           - configure kernel parameters at runtime
+sysctl.conf (5)      - sysctl preload/configuration file
+sysctl.d (5)         - Configure kernel parameters at boot
+systemd-sysctl (8)   - Configure kernel parameters at boot
+systemd-sysctl.service (8) - Configure kernel parameters at boot		
+												</code></pre>
+	
+												<pre><code>$ apropos sysctl
+Output:
+_sysctl (2)          - read/write system parameters
+sysctl (2)           - read/write system parameters
+sysctl (8)           - configure kernel parameters at runtime
+sysctl.conf (5)      - sysctl preload/configuration file
+sysctl.d (5)         - Configure kernel parameters at boot
+systemd-sysctl (8)   - Configure kernel parameters at boot
+systemd-sysctl.service (8) - Configure kernel parameters at boot
+												</code></pre>
+
+												<p>The default order is specified in <b>/etc/man_db.conf</b> and is roughly 
+													(but not exactly) in ascending numerical order by section.</p>
+
+										<h4>man -a</h4>
+											<li>With the -a parameter, man will display all pages with the given name in all 
+												chapters, one  after the other, as in:</li>
+												<pre><code>$ man -a sysctl </code></pre>
+									</ul>
+									
+												
+
+									<h4>References</h4>
+										<ul>
+											<li>man pages.</li>
+										</ul>
+									
+									</div>
+								</section>
+								<hr />
+								<h4>End</h4>
+								<ul class="actions">
+									<li><a href="t2.html" class="button small">Go to Top</a></li>
+								</ul>
+
+						</div>
+					</div>
+					
+					
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="tutorials.html">Tutorials</a></li>
+										<!--
+										<li><a href="elements.html">Elements</a></li>
+										<li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										-->
+										<li><a href="https://yashkumarsahu.netlify.app/">About Me</a></li>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Learn / Reference</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="#" class="image"><img src="images/ros.png" alt="" /></a>
+										<p>ROS provides libraries and tools to help software developers create robot applications.</p>
+										<ul class="actions">
+											<li><a href="http://wiki.ros.org/" class="button">ROS Wiki</a></li>
+										</ul>
+									</article>
+									
+									<article>
+										<a href="#" class="image"><img src="images/jetson.png" alt="" /></a>
+										<p>JetsonHacks community contains a rich collection of articles on Jetson boards.</p>
+										<ul class="actions">
+											<li><a href="https://www.jetsonhacks.com/" class="button">JetsonHacks</a></li>
+										</ul>
+									</article>
+									<!--
+									<article>
+										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+									-->
+								</div>
+						
+							</section>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+						<!--		<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>	-->
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a>ysahu262@outlook.com</a></li>
+									<!--	<li class="icon solid fa-phone">(000) 000-0000</li>	-->
+									<!--	<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+									Nashville, TN 00000-0000</li>	-->
+									<li class="icon solid fa-home">Gwalior, Madhya Pradesh,<br />
+										INDIA</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Roboticized, 2021-22. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
